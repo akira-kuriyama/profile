@@ -13,8 +13,8 @@
 
       body {
         font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-        background-color: #f5f0e8;
-        color: #3a3028;
+        background-color: #f4f1ec;
+        color: #2e2a25;
         line-height: 1.6;
         min-height: 100vh;
       }
@@ -22,8 +22,8 @@
       /* --- header --- */
       .header {
         background: #fff;
-        border-bottom: 1px solid #e5ddd2;
-        padding: 40px 24px 36px;
+        border-bottom: 1px solid #e2dbd1;
+        padding: 52px 24px 48px;
       }
 
       .header-inner {
@@ -31,41 +31,53 @@
         margin: 0 auto;
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 24px;
       }
 
       .profile-icon {
-        width: 72px;
-        height: 72px;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
-        border: 2px solid #e0d6c8;
+        border: 2px solid #d8cfc3;
         flex-shrink: 0;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
       }
 
       .profile-name {
         font-size: 1.5rem;
         font-weight: 600;
-        letter-spacing: 0.01em;
+        letter-spacing: 0.02em;
+        color: #2e2a25;
+      }
+
+      .profile-sub {
+        font-size: 0.8rem;
+        color: #918779;
+        margin-top: 4px;
+        letter-spacing: 0.04em;
       }
 
       /* --- main --- */
       .main {
         max-width: 880px;
         margin: 0 auto;
-        padding: 36px 24px 80px;
+        padding: 44px 24px 80px;
       }
 
       /* --- section --- */
       .section {
-        margin-bottom: 44px;
+        margin-bottom: 52px;
       }
 
       .section-title {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         font-weight: 600;
-        color: #8c7e6e;
-        margin-bottom: 16px;
-        padding-left: 2px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #9a8e80;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e2dbd1;
       }
 
       /* --- card grid --- */
@@ -73,19 +85,19 @@
         list-style: none;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 14px;
+        gap: 12px;
       }
 
       .card {
         background: #fff;
-        border: 1px solid #e5ddd2;
-        border-radius: 10px;
+        border: 1px solid #e2dbd1;
+        border-radius: 8px;
         overflow: hidden;
-        transition: box-shadow 0.2s, transform 0.2s;
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
       }
 
       .card:hover {
-        box-shadow: 0 4px 16px rgba(90, 70, 50, 0.08);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
         transform: translateY(-2px);
       }
 
@@ -93,17 +105,18 @@
         display: flex;
         align-items: center;
         gap: 14px;
-        padding: 18px 20px;
+        padding: 16px 18px;
         text-decoration: none;
         color: inherit;
         height: 100%;
       }
 
       .card-icon {
-        width: 28px;
-        height: 28px;
+        width: 24px;
+        height: 24px;
         flex-shrink: 0;
-        border-radius: 6px;
+        border-radius: 4px;
+        opacity: 0.85;
       }
 
       .card-body {
@@ -111,15 +124,15 @@
       }
 
       .card-name {
-        font-size: 1rem;
+        font-size: 0.92rem;
         font-weight: 600;
-        margin-bottom: 2px;
-        color: #3a3028;
+        margin-bottom: 1px;
+        color: #2e2a25;
       }
 
       .card-url {
-        font-size: 0.78rem;
-        color: #a89880;
+        font-size: 0.75rem;
+        color: #a89d90;
         word-break: break-all;
       }
 
@@ -133,14 +146,14 @@
 
       .talk-card {
         background: #fff;
-        border: 1px solid #e5ddd2;
-        border-radius: 10px;
+        border: 1px solid #e2dbd1;
+        border-radius: 8px;
         overflow: hidden;
-        transition: box-shadow 0.2s, transform 0.2s;
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
       }
 
       .talk-card:hover {
-        box-shadow: 0 4px 16px rgba(90, 70, 50, 0.08);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
         transform: translateY(-2px);
       }
 
@@ -150,12 +163,21 @@
         color: inherit;
       }
 
+      .talk-card-thumb-wrap {
+        overflow: hidden;
+        background: #eae5dd;
+      }
+
       .talk-card-thumb {
         width: 100%;
         aspect-ratio: 16 / 9;
         object-fit: cover;
         display: block;
-        background: #ebe4da;
+        transition: transform 0.35s ease;
+      }
+
+      .talk-card:hover .talk-card-thumb {
+        transform: scale(1.03);
       }
 
       .talk-card-body {
@@ -163,19 +185,21 @@
       }
 
       .talk-card-title {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
         font-weight: 500;
-        color: #3a3028;
+        color: #2e2a25;
         line-height: 1.5;
       }
 
       /* --- footer --- */
       .footer {
         text-align: center;
-        padding: 24px;
-        font-size: 0.75rem;
-        color: #bfb3a3;
+        padding: 36px 24px;
+        font-size: 0.72rem;
+        color: #b5aa9c;
+        letter-spacing: 0.03em;
       }
+
 
       /* --- responsive --- */
       @media (max-width: 540px) {
@@ -208,10 +232,13 @@
           src="https://avatars.githubusercontent.com/u/964694"
           alt="Akira Kuriyama"
           class="profile-icon"
-          width="72"
-          height="72"
+          width="80"
+          height="80"
         >
-        <h1 class="profile-name">Akira Kuriyama</h1>
+        <div>
+          <h1 class="profile-name">Akira Kuriyama</h1>
+          <p class="profile-sub">Software Engineer</p>
+        </div>
       </div>
     </header>
 
@@ -223,7 +250,7 @@
         <ul class="card-grid">
           <li class="card">
             <a href="https://x.com/sheepland">
-              <img class="card-icon" src="https://www.google.com/s2/favicons?domain=x.com&sz=64" alt="" width="28" height="28">
+              <img class="card-icon" src="https://www.google.com/s2/favicons?domain=x.com&sz=64" alt="" width="24" height="24">
               <div class="card-body">
                 <div class="card-name">X</div>
                 <div class="card-url">x.com/sheepland</div>
@@ -232,7 +259,7 @@
           </li>
           <li class="card">
             <a href="https://zenn.dev/akira_kuriyama">
-              <img class="card-icon" src="https://www.google.com/s2/favicons?domain=zenn.dev&sz=64" alt="" width="28" height="28">
+              <img class="card-icon" src="https://www.google.com/s2/favicons?domain=zenn.dev&sz=64" alt="" width="24" height="24">
               <div class="card-body">
                 <div class="card-name">Zenn</div>
                 <div class="card-url">zenn.dev/akira_kuriyama</div>
@@ -241,7 +268,7 @@
           </li>
           <li class="card">
             <a href="https://shepherdmaster.hateblo.jp/">
-              <img class="card-icon" src="https://www.google.com/s2/favicons?domain=hateblo.jp&sz=64" alt="" width="28" height="28">
+              <img class="card-icon" src="https://www.google.com/s2/favicons?domain=hateblo.jp&sz=64" alt="" width="24" height="24">
               <div class="card-body">
                 <div class="card-name">Hatena Blog</div>
                 <div class="card-url">shepherdmaster.hateblo.jp</div>
@@ -250,7 +277,7 @@
           </li>
           <li class="card">
             <a href="https://qiita.com/sheepland">
-              <img class="card-icon" src="https://www.google.com/s2/favicons?domain=qiita.com&sz=64" alt="" width="28" height="28">
+              <img class="card-icon" src="https://www.google.com/s2/favicons?domain=qiita.com&sz=64" alt="" width="24" height="24">
               <div class="card-body">
                 <div class="card-name">Qiita</div>
                 <div class="card-url">qiita.com/sheepland</div>
@@ -259,7 +286,7 @@
           </li>
           <li class="card">
             <a href="https://medium.com/@sheepland">
-              <img class="card-icon" src="https://www.google.com/s2/favicons?domain=medium.com&sz=64" alt="" width="28" height="28">
+              <img class="card-icon" src="https://www.google.com/s2/favicons?domain=medium.com&sz=64" alt="" width="24" height="24">
               <div class="card-body">
                 <div class="card-name">Medium</div>
                 <div class="card-url">medium.com/@sheepland</div>
@@ -268,7 +295,7 @@
           </li>
           <li class="card">
             <a href="https://speakerdeck.com/sheepland">
-              <img class="card-icon" src="https://www.google.com/s2/favicons?domain=speakerdeck.com&sz=64" alt="" width="28" height="28">
+              <img class="card-icon" src="https://www.google.com/s2/favicons?domain=speakerdeck.com&sz=64" alt="" width="24" height="24">
               <div class="card-body">
                 <div class="card-name">Speaker Deck</div>
                 <div class="card-url">speakerdeck.com/sheepland</div>
@@ -284,7 +311,7 @@
         <ul class="card-grid">
           <li class="card">
             <a href="https://gist.github.com/akira-kuriyama/ed9e6828a2053a749269d0503f781d18">
-              <img class="card-icon" src="https://www.google.com/s2/favicons?domain=gist.github.com&sz=64" alt="" width="28" height="28">
+              <img class="card-icon" src="https://www.google.com/s2/favicons?domain=gist.github.com&sz=64" alt="" width="24" height="24">
               <div class="card-body">
                 <div class="card-name">記事一覧</div>
                 <div class="card-url">gist.github.com</div>
@@ -300,7 +327,9 @@
         <ul class="talk-grid">
           <li class="talk-card">
             <a href="https://speakerdeck.com/sheepland/building-organization-wide-product-security">
-              <img class="talk-card-thumb" src="https://files.speakerdeck.com/presentations/2478589c7f0f4a1baa5470b6a01e0fd4/preview_slide_0.jpg" alt="" loading="lazy">
+              <div class="talk-card-thumb-wrap">
+                <img class="talk-card-thumb" src="https://files.speakerdeck.com/presentations/2478589c7f0f4a1baa5470b6a01e0fd4/preview_slide_0.jpg" alt="" loading="lazy">
+              </div>
               <div class="talk-card-body">
                 <div class="talk-card-title">ゼロから始める全社横断プロダクトセキュリティ</div>
               </div>
@@ -308,7 +337,9 @@
           </li>
           <li class="talk-card">
             <a href="https://speakerdeck.com/sheepland/datadog-on-cal-now-in-production">
-              <img class="talk-card-thumb" src="https://files.speakerdeck.com/presentations/9f3f1de66bff4ca4a7c5568bcffe5933/preview_slide_0.jpg" alt="" loading="lazy">
+              <div class="talk-card-thumb-wrap">
+                <img class="talk-card-thumb" src="https://files.speakerdeck.com/presentations/9f3f1de66bff4ca4a7c5568bcffe5933/preview_slide_0.jpg" alt="" loading="lazy">
+              </div>
               <div class="talk-card-body">
                 <div class="talk-card-title">Datadog On-Callを本番導入しました</div>
               </div>
@@ -316,7 +347,9 @@
           </li>
           <li class="talk-card">
             <a href="https://speakerdeck.com/sheepland/enhancing-observability-with-datadog-logs">
-              <img class="talk-card-thumb" src="https://files.speakerdeck.com/presentations/9d9c14ad9c534d1cb5953efae0aca805/preview_slide_0.jpg" alt="" loading="lazy">
+              <div class="talk-card-thumb-wrap">
+                <img class="talk-card-thumb" src="https://files.speakerdeck.com/presentations/9d9c14ad9c534d1cb5953efae0aca805/preview_slide_0.jpg" alt="" loading="lazy">
+              </div>
               <div class="talk-card-body">
                 <div class="talk-card-title">Datadog Logsで実現するオブザーバビリティの向上</div>
               </div>
@@ -324,7 +357,9 @@
           </li>
           <li class="talk-card">
             <a href="https://speakerdeck.com/sheepland/fix-container-vulnerabilities-on-cicd">
-              <img class="talk-card-thumb" src="https://files.speakerdeck.com/presentations/91b8d965056049cfbcfad04788b3d584/preview_slide_0.jpg" alt="" loading="lazy">
+              <div class="talk-card-thumb-wrap">
+                <img class="talk-card-thumb" src="https://files.speakerdeck.com/presentations/91b8d965056049cfbcfad04788b3d584/preview_slide_0.jpg" alt="" loading="lazy">
+              </div>
               <div class="talk-card-body">
                 <div class="talk-card-title">コンテナ脆弱性修正をRenovate,Dependabotのように行う</div>
               </div>
@@ -332,7 +367,9 @@
           </li>
           <li class="talk-card">
             <a href="https://speakerdeck.com/sheepland/deploy-timing-on-datadog-graph">
-              <img class="talk-card-thumb" src="https://files.speakerdeck.com/presentations/f142e3a04a3542e5b27cb77cce5ce608/preview_slide_0.jpg" alt="" loading="lazy">
+              <div class="talk-card-thumb-wrap">
+                <img class="talk-card-thumb" src="https://files.speakerdeck.com/presentations/f142e3a04a3542e5b27cb77cce5ce608/preview_slide_0.jpg" alt="" loading="lazy">
+              </div>
               <div class="talk-card-body">
                 <div class="talk-card-title">Datadogのグラフにデプロイタイミングを表示する</div>
               </div>
@@ -340,7 +377,9 @@
           </li>
           <li class="talk-card">
             <a href="https://speakerdeck.com/sheepland/speeding-up-container-builds-with-docker-build-cloud">
-              <img class="talk-card-thumb" src="https://files.speakerdeck.com/presentations/58e056d161df43b99c529780085acd14/preview_slide_0.jpg" alt="" loading="lazy">
+              <div class="talk-card-thumb-wrap">
+                <img class="talk-card-thumb" src="https://files.speakerdeck.com/presentations/58e056d161df43b99c529780085acd14/preview_slide_0.jpg" alt="" loading="lazy">
+              </div>
               <div class="talk-card-body">
                 <div class="talk-card-title">Docker Build Cloudを導入してコンテナイメージビルド時間を80%削減した話</div>
               </div>
@@ -351,7 +390,9 @@
 
     </main>
 
-    <footer class="footer">&copy; Akira Kuriyama</footer>
+    <footer class="footer">
+&copy; Akira Kuriyama
+    </footer>
 
   </body>
 </html>
