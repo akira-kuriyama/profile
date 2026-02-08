@@ -13,16 +13,15 @@
 
       body {
         font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-        background-color: #f4f1ec;
-        color: #2e2a25;
+        background-color: #eef2ee;
+        color: #1e2a22;
         line-height: 1.6;
         min-height: 100vh;
       }
 
       /* --- header --- */
       .header {
-        background: #fff;
-        border-bottom: 1px solid #e2dbd1;
+        background: #4a6354;
         padding: 52px 24px 48px;
       }
 
@@ -38,21 +37,21 @@
         width: 80px;
         height: 80px;
         border-radius: 50%;
-        border: 2px solid #d8cfc3;
+        border: 2px solid rgba(255, 255, 255, 0.2);
         flex-shrink: 0;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
       }
 
       .profile-name {
         font-size: 1.5rem;
         font-weight: 600;
         letter-spacing: 0.02em;
-        color: #2e2a25;
+        color: #f0f4f1;
       }
 
       .profile-sub {
         font-size: 0.8rem;
-        color: #918779;
+        color: #9aaa9e;
         margin-top: 4px;
         letter-spacing: 0.04em;
       }
@@ -74,10 +73,10 @@
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        color: #9a8e80;
+        color: #3d5a47;
         margin-bottom: 20px;
         padding-bottom: 10px;
-        border-bottom: 1px solid #e2dbd1;
+        border-bottom: 1px solid #d4ddd6;
       }
 
       /* --- card grid --- */
@@ -89,15 +88,16 @@
       }
 
       .card {
-        background: #fff;
-        border: 1px solid #e2dbd1;
-        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(4px);
+        border: 1px solid #d4ddd6;
+        border-radius: 6px;
         overflow: hidden;
         transition: box-shadow 0.2s ease, transform 0.2s ease;
       }
 
       .card:hover {
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 4px 16px rgba(30, 60, 40, 0.07);
         transform: translateY(-2px);
       }
 
@@ -127,12 +127,12 @@
         font-size: 0.92rem;
         font-weight: 600;
         margin-bottom: 1px;
-        color: #2e2a25;
+        color: #2c3e34;
       }
 
       .card-url {
         font-size: 0.75rem;
-        color: #a89d90;
+        color: #7d9282;
         word-break: break-all;
       }
 
@@ -145,15 +145,16 @@
       }
 
       .talk-card {
-        background: #fff;
-        border: 1px solid #e2dbd1;
-        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(4px);
+        border: 1px solid #d4ddd6;
+        border-radius: 6px;
         overflow: hidden;
         transition: box-shadow 0.2s ease, transform 0.2s ease;
       }
 
       .talk-card:hover {
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 4px 16px rgba(30, 60, 40, 0.07);
         transform: translateY(-2px);
       }
 
@@ -165,7 +166,7 @@
 
       .talk-card-thumb-wrap {
         overflow: hidden;
-        background: #eae5dd;
+        background: #dce4dd;
       }
 
       .talk-card-thumb {
@@ -187,7 +188,7 @@
       .talk-card-title {
         font-size: 0.78rem;
         font-weight: 500;
-        color: #2e2a25;
+        color: #1e2a22;
         line-height: 1.5;
       }
 
@@ -196,10 +197,9 @@
         text-align: center;
         padding: 36px 24px;
         font-size: 0.72rem;
-        color: #b5aa9c;
+        color: #9aaa9e;
         letter-spacing: 0.03em;
       }
-
 
       /* --- responsive --- */
       @media (max-width: 540px) {
@@ -390,9 +390,7 @@
 
     </main>
 
-    <footer class="footer">
-&copy; Akira Kuriyama
-    </footer>
+    <footer class="footer">&copy; Akira Kuriyama</footer>
 
   </body>
 </html>
